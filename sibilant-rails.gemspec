@@ -8,7 +8,12 @@ Gem::Specification.new do |s|
   s.summary     = %q{Sibilant adapter for the Rails asset pipeline.}
   s.description = %q{Sibilant adapter for the Rails asset pipeline.}
 
-  s.files       = ["lib/sibilant-rails.rb"]
+  s.add_runtime_dependency 'tilt'
+  s.add_runtime_dependency 'sprockets'
+  s.add_runtime_dependency 'execjs'
+  s.add_runtime_dependency 'json'
+
+  s.files       = ["lib/sibilant-rails.rb", "lib/sibilant/tilt/template.rb"]
   s.homepage    = 'http://rubygems.org/gems/sibilant-rails'
   s.license     = 'MIT'
 end

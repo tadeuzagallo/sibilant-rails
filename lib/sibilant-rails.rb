@@ -1,2 +1,1 @@
-class SibilantRails
-end
+require 'sibilant/tilt/template'

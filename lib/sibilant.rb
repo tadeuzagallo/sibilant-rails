@@ -1,4 +1,5 @@
 require 'execjs'
+require 'json'
 
 module Sibilant
   @@context = nil

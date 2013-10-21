@@ -1,7 +1,6 @@
 require 'sibilant'
 require 'sprockets'
 require 'tilt'
-require 'json'
 
 module Sibilant
   module Tilt

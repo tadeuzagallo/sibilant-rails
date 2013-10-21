@@ -6,12 +6,19 @@ module Sibilant
   end
 
   private
+  def self.source_dir
+    @@source_path ||= File.join(File.expand_path(File.dirname(__FILE__)), 'source')
+  end
+
+  def self.source_path(source)
+    File.join(self.source_dir, source)
+  end
 
   def self.context
     if @@context.nil?
-      browser = open("/Users/tadeu/www/javascript/sibilant/lib/browser.js").read
-      functional = open("/Users/tadeu/www/javascript/sibilant/include/functional.sibilant").read
-      macros = open("/Users/tadeu/www/javascript/sibilant/include/macros.sibilant").read
+      browser = open(self.source_path("browser.js")).read
+      functional = open(self.source_path("functional.sibilant")).read
+      macros = open(self.source_path("macros.sibilant")).read
 
       source = <<-src
       #{browser};

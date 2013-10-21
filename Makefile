@@ -7,4 +7,7 @@ build:
 	gem build sibilant-rails.gemspec
 
 install: 
-	gem install ./sibilant-rails-0.0.1.gem
+	gem install `ls *.gem`
+
+publish: clean build
+	gem push `ls *.gem`

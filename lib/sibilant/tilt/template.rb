@@ -1,5 +1,4 @@
 require 'sibilant'
-require 'execjs'
 require 'sprockets'
 require 'tilt'
 require 'json'

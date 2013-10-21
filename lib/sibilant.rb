@@ -1,3 +1,5 @@
+require 'execjs'
+
 module Sibilant
   @@context = nil
 
@@ -7,7 +9,7 @@ module Sibilant
 
   private
   def self.source_dir
-    @@source_path ||= File.join(File.expand_path(File.dirname(__FILE__)), 'source')
+    @@source_path ||= ENV['SIBILANT_SOURCE_PATH'] || File.join(File.expand_path(File.dirname(__FILE__)), 'source')
   end
 
   def self.source_path(source)
@@ -16,9 +18,9 @@ module Sibilant
 
   def self.context
     if @@context.nil?
-      browser = open(self.source_path("browser.js")).read
-      functional = open(self.source_path("functional.sibilant")).read
-      macros = open(self.source_path("macros.sibilant")).read
+      browser = open(self.source_path("lib/browser.js")).read
+      functional = open(self.source_path("include/functional.sibilant")).read
+      macros = open(self.source_path("include/macros.sibilant")).read
 
       source = <<-src
       #{browser};

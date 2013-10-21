@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'execjs'
   s.add_runtime_dependency 'json'
 
-  s.files       = ["lib/sibilant-rails.rb", "lib/sibilant/tilt/template.rb"]
+  s.files       = ["lib/sibilant-rails.rb", "lib/sibilant/tilt/template.rb", "lib/sibilant/haml/filter.rb", "lib/sibilant.rb"]
   s.homepage    = 'http://rubygems.org/gems/sibilant-rails'
   s.license     = 'MIT'
 end

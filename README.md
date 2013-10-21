@@ -5,7 +5,7 @@ Gem for enable [Sibilant JS][1] on rails
 simply add
      
     group :assets do
-      gem 'sibilant-rails', github: 'tadeuzagallo/sibilant-rails'
+      gem 'sibilant-rails'
     end
     
 to your `Gemfile` and all your assets with `.sibilant` extension will be automatically compiled
